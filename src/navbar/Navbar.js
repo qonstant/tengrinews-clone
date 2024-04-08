@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { HiOutlineMenu, HiOutlineSearch, HiOutlineX } from "react-icons/hi";
+import { HiOutlineMenu, HiOutlineSearch, HiOutlineX, HiChevronRight } from "react-icons/hi";
 
 import logo from "../images/tengri-news-logo.png";
 import { useGlobalContext } from "../context";
@@ -17,6 +17,8 @@ const Navbar = (props) => {
   const [showMenu, setShowMenu] = useState(false);
   // Search input (desktop view)
   const [showSearch, setShowSearch] = useState(false);
+  // State to track which icon is active
+  const [activeIcon, setActiveIcon] = useState(null);
 
   const { sections, logoSections, formatSection, sectionMappings } = useGlobalContext(); // Use logoSections and sectionMappings from context
 
@@ -62,6 +64,20 @@ const Navbar = (props) => {
     navigate(`/section/${formattedSection}`);
   };
 
+  // Toggle the search icon
+  const toggleSearch = () => {
+    setShowSearch(!showSearch);
+    setShowMenu(false);
+    setActiveIcon(showSearch ? null : "search");
+  };
+
+  // Toggle the menu icon
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+    setShowSearch(false);
+    setActiveIcon(showMenu ? null : "menu");
+  };
+
   return (
     <nav className={style.navbarContainer}>
       {/* Navbar menu in desktop view */}
@@ -85,15 +101,22 @@ const Navbar = (props) => {
 
       {/* Main navbar with logo */}
       <div className={style.navbar}>
-        {showMenu ? (
+      {activeIcon === "menu" && (
+        <HiOutlineX
+          className={classNames(style.icon, style.menuIcon)}
+          onClick={toggleMenu}
+        />
+        )}
+        {activeIcon === "search" && (
           <HiOutlineX
             className={classNames(style.icon, style.menuIcon)}
-            onClick={() => setShowMenu(false)}
+            onClick={toggleSearch}
           />
-        ) : (
+        )}
+        {activeIcon !== "menu" && activeIcon !== "search" && (
           <HiOutlineMenu
             className={classNames(style.icon, style.menuIcon)}
-            onClick={() => setShowMenu(true)}
+            onClick={toggleMenu}
           />
         )}
 
@@ -119,7 +142,7 @@ const Navbar = (props) => {
 
         <HiOutlineSearch
           className={classNames(style.icon, style.searchIcon)}
-          onClick={() => setShowSearch(!showSearch)}
+          onClick={toggleSearch}
         />
       </div>
 
@@ -185,6 +208,7 @@ const Navbar = (props) => {
       {/* Static clickable div with green background and white font color */}
       <a href="https://www.instagram.com/qonstan/" className={style.staticDiv} target="_blank" rel="noopener noreferrer">
         Подписывайтесь на мой Instagram
+        <HiChevronRight className={style.chevronIcon} />
       </a>
     </nav>
   );

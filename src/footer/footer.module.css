@@ -1,13 +1,23 @@
-.divider {
-  margin-top: 30px;
-}
-
 .footerContainer {
   padding: 20px;
 }
 
 .logo {
   width: 184px;
+}
+
+.greyBackground {
+  background-color: #303133; /* Or any shade of grey you prefer */
+}
+
+.nav a {
+  color: #FFFFFF;
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s ease; /* Add transition for smooth effect */
+}
+
+.nav a:hover {
+  color: #CCCCCC; /* Change text color on hover */
 }
 
 .nav {
@@ -26,18 +36,10 @@
 .copyright {
   text-align: center;
   padding: 8px;
-  border-top: var(--border);
+  border-top: 1px solid #545454; /* Set border color to grey */
+  color: #FFFFFF;
 }
 
-/* Media queries */
-@media screen and (min-width: 768px) {
-  .nav {
-    columns: 3;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .nav {
-    columns: 4;
-  }
+.divider {
+  margin-top: 30px;
 }
