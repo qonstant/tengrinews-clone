@@ -21,6 +21,7 @@ This level was quite easy even for a backend developer.
 
 - [x]  Реализуйте пагинацию для управления отображением новостных статей.
 Implement pagination to control the display of news articles.
+<img width="1470" alt="2_1" src="https://github.com/qonstant/tengri-news-clone/assets/98641240/f11b6eb9-963c-4d1e-a443-bea41916099d">
 - [x]  Введите возможность фильтровать новости по категориям.
 Enter the ability to filter news by category.
 - [x]  Обеспечьте функциональность поиска, позволяющую пользователям находить новости по ключевым словам.
