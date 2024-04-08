@@ -18,7 +18,7 @@ const Navbar = (props) => {
   // Search input (desktop view)
   const [showSearch, setShowSearch] = useState(false);
 
-  const { sections, logoSections, formatSection } = useGlobalContext(); // Use logoSections from context
+  const { sections, logoSections, formatSection, sectionMappings } = useGlobalContext(); // Use logoSections and sectionMappings from context
 
   React.useEffect(() => {
     const handleResize = () => {
@@ -58,6 +58,8 @@ const Navbar = (props) => {
   // Handle click on section link
   const handleSectionClick = (section) => {
     setActiveSection(section);
+    const formattedSection = sectionMappings[section]; // Get the corresponding section from sectionMappings
+    navigate(`/section/${formattedSection}`);
   };
 
   return (

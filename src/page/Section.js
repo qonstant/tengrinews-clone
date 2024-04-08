@@ -16,7 +16,7 @@ const Section = () => {
   if (loaded && articles.length < 1) {
     return (
       <div className="sectionContainer">
-        <h2 className={style.title}>{formatSection(sectionName)} News</h2>
+        <h2 className={style.title}>{formatSection(sectionName)}</h2>
         <hr />
         <div className={style.article}>No articles found</div>
       </div>

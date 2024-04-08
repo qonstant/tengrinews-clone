@@ -7,36 +7,52 @@ const AppProvider = ({ children }) => {
   const sections = [
     "NEWS",
     "LIFE",
-    "SPORTS",
+    "SPORT",
     "TRAVEL",
     "GUIDE",
     "EDU",
     "AUTO",
   ];
 
+  // Define mappings for sections
+  const sectionMappings = {
+    NEWS: "world",
+    LIFE: "health",
+    SPORT: "technology",
+    TRAVEL: "travel",
+    GUIDE: "climate",
+    EDU: "education",
+    AUTO: "automobiles",
+  };
+
+
   // Define the logo sections
   const logoSections = [
-    "home",
-    "articles",
-    "kazakhstan",
+    "world",
+    "science",
+    "us",
   ];
 
   // Format sections' names for navbar menu
   const formatSection = (section) => {
     switch (section) {
+      case "health":
+          return "Tengri Life";
+      case "technology":
+        return "Tengri Tech( Couldn't find sport :/ )";
+      case "travel":
+        return "Tengri Travel";
+      case "climate":
+        return "Tengri Guide";
+      case "education":
+        return "Tengri Edu";
+      case "automobiles":
+        return "Tengri Auto";
       case "us":
-        return "U.S.";
-      case "nyregion":
-        return "N.Y.";
-      case "t-magazine":
-        return "magazine";
-      case "realestate":
-        return "real estate";
-      case "kazakhstan":
         return "Что будет с Казахстаном?";
-      case "articles":
+      case "science":
         return "Статьи";
-      case "home":
+      case "world":
         return "Новости";
       default:
         return section;
@@ -61,6 +77,7 @@ const AppProvider = ({ children }) => {
         logoSections, // Include logoSections in the context
         formatSection,
         formatDate,
+        sectionMappings,
       }}
     >
       {children}
