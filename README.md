@@ -12,6 +12,8 @@ Implement the basic news list function to display a list of news articles on the
 - [x] Позвольте пользователям кликать по статье для просмотра её детальной информации.
 Allow users to click on an article to view its detailed information.
 
+https://github.com/qonstant/tengri-news-clone/assets/98641240/24555f67-ee12-4155-9e97-fb72c8f7698f
+
 \
 This level was quite easy even for a backend developer.
 
