@@ -12,7 +12,7 @@ Implement the basic news list function to display a list of news articles on the
 - [x] Позвольте пользователям кликать по статье для просмотра её детальной информации.
 Allow users to click on an article to view its detailed information.
 
-[https://private-user-images.githubusercontent.com/98641240/320611858-24555f67-ee12-4155-9e97-fb72c8f7698f.png](https://private-user-images.githubusercontent.com/98641240/320611858-24555f67-ee12-4155-9e97-fb72c8f7698f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTI2MDEzNTMsIm5iZiI6MTcxMjYwMTA1MywicGF0aCI6Ii85ODY0MTI0MC8zMjA2MTE4NTgtMjQ1NTVmNjctZWUxMi00MTU1LTllOTctZmI3MmM4Zjc2OThmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDA4VDE4MzA1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTEzYjUwZTk5MmIzYjQwOWVkOGQyNTBhZTUwMjE0M2NkY2M3NTY3ZmJjY2Q4OTM5YTA4MGQxZWY3Y2Y3YmFiOTQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.CuU84X8Ebi-pfB4mDX85MXULmkIKdH8F9L8R0YMvbVk)
+[https://private-user-images.githubusercontent.com/98641240/320611858-24555f67-ee12-4155-9e97-fb72c8f7698f.png](https://private-user-images.githubusercontent.com/98641240/320611858-24555f67-ee12-4155-9e97-fb72c8f7698f.png
 
 \
 This level was quite easy even for a backend developer.
