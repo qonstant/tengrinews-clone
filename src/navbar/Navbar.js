@@ -57,27 +57,31 @@ const Navbar = (props) => {
     }
   };
 
-  // Handle click on section link
-  const handleSectionClick = (section) => {
-    setActiveSection(section);
-    const formattedSection = sectionMappings[section]; // Get the corresponding section from sectionMappings
-    navigate(`/section/${formattedSection}`);
-  };
-
+  
   // Toggle the search icon
   const toggleSearch = () => {
     setShowSearch(!showSearch);
     setShowMenu(false);
     setActiveIcon(showSearch ? null : "search");
   };
-
+  
   // Toggle the menu icon
   const toggleMenu = () => {
     setShowMenu(!showMenu);
     setShowSearch(false);
     setActiveIcon(showMenu ? null : "menu");
   };
+  
+  // Handle click on section link
+  const handleSectionClick = (section) => {
+    setActiveSection(section);
+    const formattedSection = sectionMappings[section];
+    navigate(`/section/${formattedSection}`);
+    setShowMenu(false);
+    setActiveIcon("section"); // Set activeIcon to indicate section selection
+  };  
 
+  
   return (
     <nav className={style.navbarContainer}>
       {/* Navbar menu in desktop view */}
@@ -113,7 +117,7 @@ const Navbar = (props) => {
             onClick={toggleSearch}
           />
         )}
-        {activeIcon !== "menu" && activeIcon !== "search" && (
+        {(activeIcon === "section" || (activeIcon !== "menu" && activeIcon !== "search")) && (
           <HiOutlineMenu
             className={classNames(style.icon, style.menuIcon)}
             onClick={toggleMenu}
@@ -184,24 +188,18 @@ const Navbar = (props) => {
             </button>
           </form>
           <ul className={style.menu}>
-            {sections.map((section, index) => {
-              return (
-                <li key={index}>
-                  {section === "home" ? (
-                    <NavLink to={`/`} onClick={() => setShowMenu(false)}>
-                      {formatSection(section)}
-                    </NavLink>
-                  ) : (
-                    <NavLink
-                      to={`/section/${section}`}
-                      onClick={() => setShowMenu(false)}
-                    >
-                      {formatSection(section)}
-                    </NavLink>
-                  )}
-                </li>
-              );
-            })}
+          {sections.map((section, index) => (
+              <li key={index}>
+                <NavLink
+                  to={section === "home" ? "/" : `/section/${sectionMappings[section]}`}
+                  onClick={() => {
+                    setActiveIcon("section");
+                    setShowMenu(false)}}
+                >
+                  {formatSection(section)}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
       )}
