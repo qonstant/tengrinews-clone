@@ -1,0 +1,301 @@
+/* Navbar */
+.navbarContainer {
+  font-family: var(--secondary-font);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* justify-content: flex-start; */
+  padding: 12px 15px 8px;
+  position: relative;
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.logo {
+  width: 190px;
+}
+
+.icon {
+  font-size: 24px;
+  cursor: pointer;
+  
+}
+
+.searchIcon {
+  visibility: hidden;
+}
+
+.date {
+  font-family: var(--primary-font);
+  font-size: 13px;
+  font-weight: bold;
+  background-color: #f7f7f7;
+  padding: 13px 20px 12px;
+  border-bottom: var(--border);
+}
+
+/* Navbar menu (desktop view) */
+.sections {
+  font-family: "Albert Sans Regular", sans-serif;
+  font-size: 16px;
+  display: none;
+  justify-content: left;
+  list-style: none;
+  padding: 15px 20px;
+  border-bottom: var(--border);
+  background-color: #303133;
+}
+
+/* --------------- */
+.sections > li {
+  text-transform: capitalize;
+  position: relative; /* Ensure positioning of the lines */
+}
+
+.sections > li::after {
+  content: "";
+  position: absolute;
+  bottom: -15px; /* Adjust as needed */
+  left: 10px;
+  /* justify-content: center; */
+  width: 60%; /* Full width */
+  height: 4px; /* Thickness of the line */
+}
+
+.sections > li.active::after {
+  background-color: #00AA25; /* Green line for active section */
+}
+
+.sections > li:not(.active):hover::after {
+  background-color: #EF1936; /* Red line for other sections on hover */
+}
+/* --------------- */
+
+
+/* Logo Sections */
+
+.logoSections {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex; /* Change to flex for horizontal alignment */
+  justify-content: flex-start; /* Align items to the left */
+  list-style: none;
+  padding: 15px 20px;
+  background-color: #ffffff;
+  margin-top: 5px; /* Add margin for distance */
+  display: none;
+}
+
+.logoSections > li {
+  margin-right: 20px; /* Add margin between items */
+}
+
+/* Green text color for hover */
+.logoSections > li > a:hover {
+  color: #00AA01;
+  font-weight: bold;
+}
+
+
+
+/* --------------- */
+
+/* Search form */
+.searchForm {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.searchInput {
+  font-size: 11px;
+  font-family: var(--secondary-font);
+  color: var(--secondary-font-color);
+  text-transform: capitalize;
+  height: 35px;
+  border: var(--border);
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.searchButton {
+  height: 35px;
+  padding: 8px;
+  margin-left: 10px;
+  transition: background-color 2s ease;
+  /* color: green; */
+}
+
+.searchButton:active,
+.searchButton:hover {
+  background-color: #326891;
+}
+
+/* Navbar menu (mobile and tablet view) */
+.sectionMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  padding-bottom: 40px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  list-style: none;
+  padding: 30px;
+}
+
+.menu > li {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+/* Nav links */
+.sections > li > a,
+.menu > li > a {
+  border-radius: 3px;
+  padding: 10px;
+  color: #FFFFFF;
+}
+
+
+
+/* .sections > li > a {
+  transition: background-color 1.5s ease;
+}
+
+
+.sections > li > a:active,
+.sections > li > a:hover, */
+
+/* .sections > li > a:hover {
+  background-color: #f7f7f7;
+} */
+
+/* Media Queries */
+
+.staticDiv {
+  display: none;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: relative;
+  width: 100%;
+  height: 40px;
+  padding: 5px 20px;
+  background-color: #31A802;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+  z-index: 3; /* Ensure the staticDiv is positioned above other elements */
+}
+
+
+.staticDiv::after {
+  content: '>'; /* Unicode character for a right-pointing triangle */
+  font-size: 20px; /* Adjust the size of the arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust the distance of the arrow from the right side */
+  transform: translateY(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 225px;
+  }
+
+  .icon {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar {
+    padding: 0px 15px 5px;
+    padding-left: 20px;
+  }
+
+  .logo {
+    width: 199px;
+  }
+
+  .menuIcon {
+    visibility: visible;
+    color: #000000;
+    margin-right: 15px;
+    height: 33px;
+    width: 33px;
+  }
+
+  .searchIcon {
+    visibility: visible;
+    color: #01AB01;
+    width: 35px; /* Adjust icon size as needed */
+    height: 35px; /* Adjust icon size as needed */
+    border-radius: 50%; /* Makes it a circle */
+    background-color: #F4F4F5; /* Grey background */
+    display: inline-flex; /* Ensures the circle retains its circular shape */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    padding: 5px; /* Increase padding to make the circle larger */
+    /* position: absolute;  */
+    margin-left: 10px;
+
+  }
+
+  .languageIcon {
+    visibility: visible;
+    color: #01AB01;
+    width: 35px; /* Adjust icon size as needed */
+    height: 35px; /* Adjust icon size as needed */
+    border-radius: 50%; /* Makes it a circle */
+    background-color: #F4F4F5; /* Grey background */
+    display: inline-flex; /* Ensures the circle retains its circular shape */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    padding: 5px; /* Increase padding to make the circle larger */
+    font-size: 18px;
+    /* position: absolute; */
+    margin-left: auto;
+  }  
+
+  .searchForm {
+    margin: 20px 0;
+  }
+
+  .searchInput {
+    width: 400px;
+  }
+
+  .searchButton {
+    padding: 8px 20px;
+    /* color: green */
+  }
+
+  .sections {
+    display: flex;
+  }
+
+  .logoSections {
+    display: flex;
+  }
+
+  .staticDiv {
+    display: flex;
+  }
+}

@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Variables */
+:root {
+  --primary-font: "Times New Roman", Times, serif;
+  --secondary-font: Helvetica, Arial, sans-serif;
+  --border: 2px solid #ebebeb;
+  --primary-font-color: #121212;
+  --secondary-font-color: #727272;
+}
+
+body {
+  color: var(--primary-font-color);
+}
+
+/* Set background properties for left side */
+.background-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(50% - 600px); /* Adjust width as needed */
+  height: 100%;
+  background-color: #F1F2F1; /* Adjust background color as needed */
+  z-index: -1; /* Place behind other elements */
+}
+
+/* Set background properties for right side */
+.background-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(50% - 600px); /* Adjust width as needed */
+  height: 100%;
+  background-color: #F1F2F1; /* Adjust background color as needed */
+  z-index: -1; /* Place behind other elements */
+}
+
+
+
+/* Global */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.navbar-background {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  /* height: 6.9%; Full height */
+  height: 54px;
+  background-color: #303133; /* Adjust background color as needed */
+  z-index: 0; /* Place behind other elements */
+}
+
+.sectionContainer {
+  padding: 0 20px;
+  margin-top: 40px;
+}
+
+hr {
+  border: 0px solid #ebebeb;
+}
+
+.btn {
+  font-size: 18px;
+  font-family: var(--secondary-font);
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #567b95;
+  border: 1px solid #326891;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-background {
+    visibility: visible; /* Hide by default */
+  }
+}

@@ -1,0 +1,90 @@
+/* Section and SearchResults */
+.title {
+  font-size: 34px;
+  text-transform: capitalize;
+  margin: 3px 0 8px;
+}
+
+.article {
+  padding: 0 20px;
+  margin-top: 30px;
+}
+
+/* SearchResults */
+.titleElement {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.sortOptions {
+  width: 158px;
+  background-color: transparent;
+  border: none;
+  color: var(--secondary-font-color);
+  font-family: var(--secondary-font);
+  padding: 5px 18px 5px 8px;
+  cursor: pointer;
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.pageItem {
+  margin: 0 5px;
+}
+
+.pageLink {
+  background-color: transparent; /* Remove background color */
+  border: none; /* Remove border */
+  padding: 5px 10px;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Transition color */
+}
+
+.pageLink:hover {
+  color: #777; /* Change color on hover */
+}
+
+.activePage {
+  color: #01AB01; /* Change color for active page */
+}
+
+
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  .article {
+    display: grid;
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .titleElement {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .article {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .preTitle {
+    font-size: 20px;
+  }
+}
