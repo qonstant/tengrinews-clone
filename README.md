@@ -46,7 +46,7 @@ Enable the function to sort news articles by publication date so that the latest
 Use web scraping libraries to dynamically parse news content from the TengriNews website, ensuring a continuous flow of relevant news articles. Or use ready-made API services of your choice.
 
 \
-For this purpose, I decided to use the NYT API. The reason is that the NYT API has a limit of 500 API calls per day. For example, the News API has a limit of 100 API calls per day. This is the main advantage of the New York Times API.
+For this purpose, I decided to use the NYT API. The reason is that the NYT API has a limit of 500 API calls per day. For example, the News API has a limit of 100 API calls per day(for free). This is the main advantage of the New York Times API.
 
 ### &#9745;Bonus level:
 
