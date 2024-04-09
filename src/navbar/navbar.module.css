@@ -219,7 +219,7 @@
   font-size: 20px; 
   position: absolute;
   top: 50%;
-  right: 10px; /* Adjust the distance of the arrow from the right side */
+  right: 10px; /* Distance of the arrow from the right side */
   transform: translateY(-50%);
 }
 
