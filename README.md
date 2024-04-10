@@ -27,7 +27,9 @@ Here you can access [Project URL](https://tengrinews-clone.vercel.app/), but if 
    ```sh
    http://localhost:3000
 
-### Prerequisites
+\
+I encountered some difficulties with the frontend, which might result in variations in size, font, and position. Additionally, the API I utilized does not feature the exact same sections as Tengrinews, hence I opted for the most relevant ones.
+
 
 ### &#9745;Level 1:
 
