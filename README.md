@@ -3,7 +3,31 @@
 
 Tengrinews clone created using React.
 
-P.S. This is what happens when backend developer tries to do some frontend.
+P.S. This is what happens when backend developer tries to do some frontend. Tbh, this is my second react project)
+
+\
+Here you can access [Project URL](https://tengrinews-clone.vercel.app/), but if you wanna run this project.
+
+### Run
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/qonstant/tengrinews-clone.git
+
+2. Dependencies installing:
+   ```sh
+   npm install
+3. Environment variables: \
+   Create ".env" file in the project folder. \
+   Declare "REACT_APP_API_KEY" variable and apply your own New York Times API key.
+4. Running the project:
+   ```sh
+   npm run
+5. Accessing the project:
+   ```sh
+   http://localhost:3000
+
+### Prerequisites
 
 ### &#9745;Level 1:
 
