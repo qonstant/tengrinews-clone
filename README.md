@@ -56,19 +56,23 @@ Implement pagination to control the display of news articles.
 
 
 - [x]  Введите возможность фильтровать новости по категориям.
+
 Enter the ability to filter news by category.
+
 <img width="1470" alt="2_2" src="https://github.com/qonstant/tengri-news-clone/assets/98641240/1d9b450e-1e3e-4d4b-b999-740572afd5e2">
 
 
 - [x]  Обеспечьте функциональность поиска, позволяющую пользователям находить новости по ключевым словам.
 
 Provide search functionality that allows users to find news by keywords.
+
 <img width="1463" alt="2_3" src="https://github.com/qonstant/tengri-news-clone/assets/98641240/250aa025-8fb2-4144-871f-38b679a457ad">
 
 
 - [x]  Включите функцию для сортировки новостных статей по дате публикации, чтобы первыми отображались последние новости.
 
 Enable the function to sort news articles by publication date so that the latest news is displayed first.
+
 <img width="1470" alt="2_4" src="https://github.com/qonstant/tengri-news-clone/assets/98641240/95264dd6-3d68-4e92-a1e8-613d2ecc002b">
 
 ### &#9745;Level 3:
